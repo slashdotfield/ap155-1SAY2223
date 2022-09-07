@@ -1,2 +1,13 @@
-
+*.aux
+*.bbl
+*.bcf
+*.log
+*.out
+*.xml
+*.gz
+*.toc
+*.blg
 .ipynb_checkpoints
+Chapter1.pdf
+Chapter2.pdf
+Chapter3.pdf

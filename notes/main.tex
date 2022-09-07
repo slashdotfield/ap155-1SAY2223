@@ -1,0 +1,92 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+\usepackage{bigints}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{subcaption}
+\graphicspath{{Images/}{../Images/}}
+\usepackage{subfiles}
+\usepackage{blindtext}
+\usepackage{xr}
+\usepackage{hyperref}
+\usepackage{chngcntr}
+\usepackage{enumerate}
+\usepackage[usenames]{color}
+\counterwithin*{section}{part}
+\usepackage[backend=biber,style=ieee,defernumbers=true,refsection=section]{biblatex}
+\addbibresource{library.bib}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+%information%
+\author{Notes by Sean Julian C. Fortuna}
+\title{\textbf{INSERT TITLE HERE}}
+\date{}
+
+%physics commands%
+\newcommand{\intinfty}{\int_{-\infty}^{+\infty}}
+\newcommand{\expect}[1]{\left\langle #1 \right\rangle}
+\newcommand{\deri}[2]{\dfrac{\textnormal{d} #1 }{\textnormal{d} #2}}
+\newcommand{\parti}[2]{\dfrac{\partial #1}{\partial #2}}
+\newcommand{\delti}[2]{\dfrac{\delta #1}{\delta #2}}
+\newcommand{\knought}{\dfrac{1}{4 \pi \epsilon_0}}
+\newcommand{\munought}{\dfrac{\mu_0}{4 \pi}}
+\newcommand{\rrvec}[2]{\dfrac{\bm{r}#1 - \bm{r}#2}{\left| \bm{r}#1 - \bm{r}#2 \right|^3}}
+\newcommand{\rrscal}[2]{\dfrac{1}{\left| \bm{r}#1 - \bm{r}#2 \right|}}
+\newcommand{\iu}{{i\mkern1mu}}
+\newcommand{\tr}{\textnormal{tr}}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\prob}{prob}
+
+%formating commands
+\newcommand{\sboxed}[1]{\boxed{\hspace{15pt}
+#1
+\hspace{15pt}}}
+\newcommand{\topic}{\vspace{-1mm} \noindent \rule{0.5\textwidth}{0.4pt}  \vspace{1mm}}
+\newcommand{\red}{\textcolor{red}}
+
+%change part name and numbering
+\addto\captionsenglish{\renewcommand{\partname}{Chapter}}
+\addto\captionsenglish{\renewcommand\thepart{\arabic{part}}}
+
+%change formatting
+\numberwithin{equation}{subsubsection}
+\setlength{\parindent}{0cm}
+\setcounter{section}{0}
+\setcounter{tocdepth}{3}
+\mathtoolsset{showonlyrefs}
+
+%chapters%
+\externaldocument[1-]{Chapters/Chapter1}
+\externaldocument[2-]{Chapters/Chapter2}
+\externaldocument[3-]{Chapters/Chapter3}
+\externaldocument[4-]{Chapters/Chapter4}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\subfile{Chapters/Chapter1}
+\newpage
+\subfile{Chapters/Chapter2}
+\newpage
+\subfile{Chapters/Chapter3}
+\newpage
+\subfile{Chapters/Chapter4}
+ 
+\end{document}
+
