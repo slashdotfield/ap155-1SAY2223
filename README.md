@@ -6,5 +6,3 @@ For my students:
 
 1. For local setups: Kindly clone, and pull occasionally for updates.
 2. For remote setups: Navigate to a Jupyter Notebook. Replace 'github.com' in the URL with 'githubtocolab.com'
-
-test
